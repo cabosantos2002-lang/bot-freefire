@@ -1,7 +1,8 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
-TOKEN = 8326959748:AAGG4rqkj136IjGqE8rlPCSrJquWeL1sgyI
+import os
+TOKEN = os.getenv(8326959748:AAGG4rqkj136IjGqE8rlPCSrJquWeL1sgyI)
 ADMIN_ID = 5712230245
 
 jogadores = []
@@ -49,4 +50,5 @@ app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("entrar", entrar))
 app.add_handler(CommandHandler("abrirsala", abrirsala))
 app.add_handler(CommandHandler("sala", sala_cmd))
+
 app.run_polling()
